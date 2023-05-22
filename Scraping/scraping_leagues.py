@@ -38,7 +38,7 @@ for i in tqdm(range(len(countries)), desc="Loading..."):
 
             league['league_id'] = lg.get('href').split('wettbewerb/')[1].split('/saison_id')[0]
             league['name'] = lg.text
-            league['country'] = countries[i]['country_name']
+            league['country_id'] = countries[i]['country_id']
             league['season_id'] = seasons[n]['season_id']
             league['champion_id'] = champ.get('href').split('verein/')[1].split('/saison_id')[0]
             league['LINK']  =  'https://www.transfermarkt.com{}'.format(lg.get('href'))
