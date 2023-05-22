@@ -21,3 +21,16 @@ soup_link = BeautifulSoup(response_link.content, 'html.parser')
 n = soup_link.select('.nowrap a')
 for i in range (0,len(n),2):
     print('https://www.transfermarkt.com/' + n[i].get('href'))
+
+
+#name player
+n = soup_link.select('.nowrap a')
+for i in range (0,len(n),2):
+    print(n[i].text)
+
+
+#primry key for each player
+n = soup_link.select('.nowrap a')
+for i in range (0,len(n),2):
+    number1 = re.search(r'\d+$', n[i].get('href')).group()
+    print(number1)
