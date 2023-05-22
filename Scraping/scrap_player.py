@@ -20,7 +20,7 @@ soup_link = BeautifulSoup(response_link.content, 'html.parser')
 #link each player
 n = soup_link.select('.nowrap a')
 for i in range (0,len(n),2):
-    print('https://www.transfermarkt.com/' + n[i].get('href'))
+    print('https://www.transfermarkt.com' + n[i].get('href'))
 
 
 #name player
@@ -32,5 +32,17 @@ for i in range (0,len(n),2):
 #primry key for each player
 n = soup_link.select('.nowrap a')
 for i in range (0,len(n),2):
-    number1 = re.search(r'\d+$', n[i].get('href')).group()
-    print(number1)
+    number = re.search(r'\d+$', n[i].get('href')).group()
+    print(number)
+
+#link replce from first part
+response_link_player = requests.get('https://www.transfermarkt.com/daryl-janmaat/profil/spieler/60744', headers=headers)
+response_link_player.content.decode()
+soup_link_player = BeautifulSoup(response_link_player.content, 'html.parser')
+
+#main position
+soup_link_player.select('.detail-position__position')[0].text
+
+#market_value
+soup_link_player.select('.tm-player-market-value-development__current-value')[0].text
+
