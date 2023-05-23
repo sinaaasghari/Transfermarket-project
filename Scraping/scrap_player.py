@@ -47,6 +47,9 @@ for club in import_data:
         except:
             Player['Main_position'] = np.nan
         
+        year = re.search(r'\d+$', club["LINK"]).group()
+        Player['Season_year'] = year
+        
         try:
             nt = soup_player.select('.tm-player-market-value-development__current-value')[0].text
             nt = nt.strip()
