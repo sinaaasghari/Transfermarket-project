@@ -11,8 +11,8 @@ header = {
 with open('players__transfers_links.json') as f:
     data = json.load(f)
 
-
-players = {}
+counter = 1
+players = []
 saison_id = {'21/22':2021, '20/21':2020, '19/20':2019, '18/19':2018, '17/18':2017, '16/17':2016, '15/16':2015}
 
 for link in data:
@@ -25,7 +25,7 @@ for link in data:
         if l.text.split() not in ['Fee', 'Season']:
             finder.append(l.text.split())
     del finder[:4]
-    ll = []
+    ll = {}
     for x in range(0,len(finder)-3,4):
         if len(finder[x]) == 0:
             finder[x] = ['Unknown']
@@ -53,13 +53,13 @@ for link in data:
             g3 = ''
             for y3 in finder[x+3]:
                 g3 += y3 + ' '
-        k = [g0, g1, g2, g3]
-        ll.append(k)
-    
-    for r in ll:
-        players[link.split('/')[-4]] = {'id':link.split('/')[-1], 'Season':r[0], 'From_club':r[1], 'To_club':r[2], 'Fee':r[3]}
-    
+        ll = {'player_name':link.split('/')[-4],'player_id':link.split('/')[-1],'Season':g0, 'From_club':g1, 'To_club':g2, 'Fee':g3}
+        players.append(ll)
+        percent = (counter/len(data))*100
+        print(f'{percent}' + '%')
+        print(players)
+        counter += 1
+
 
 with open("players_transfers.json", "w") as f1:
     json.dump(players, f1) 
-
