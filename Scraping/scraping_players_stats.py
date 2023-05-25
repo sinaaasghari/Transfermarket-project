@@ -29,7 +29,7 @@ for i in range(len(import_data)):
     url = f"https://www.transfermarkt.com/{player_name}/leistungsdatendetails/spieler/{player_id}/plus/1?saison={season_id}&verein=&liga=1&wettbewerb=&pos=&trainer_id="
     print(url)
     try:
-        page = requests.get(url,headers={'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'en-US,en;q=0.9'})
+        page = requests.get(url,headers={'User-Agent': "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36"})
         soup = BeautifulSoup(page.content, 'html.parser')
         smt = soup.select("tfoot .zentriert")
     except:
@@ -67,6 +67,7 @@ for i in range(len(import_data)):
             outfield_player['red_cards'] = smt[9].text
             outfield_players.append(outfield_player)
         except:
+            print("failed")
             continue
     print(i ,"/", len(import_data))
 
