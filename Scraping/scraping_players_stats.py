@@ -13,7 +13,7 @@ leagues = [{'country_id': 'GB1', 'country_name': 'England'},
             {'country_id': 'FR1', 'country_name': 'France'},
             {'country_id': 'ES1', 'country_name': 'Spain'}]
 
-with open("Transfermarket-project\Scraping\Data_of_player.json", 'r') as file:
+with open("Data_of_player.json", 'r') as file:
     file_contents = file.read()
     import_data = json.loads(file_contents)
 
