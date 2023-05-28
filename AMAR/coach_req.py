@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import MinMaxScaler
 
+
+#-----------------------------------------------------GK_part-------------------------------------------------------------------------
 #read file
 df = pd.read_csv('GK.csv')
 df1 = df.copy()
@@ -46,6 +48,16 @@ ax1.set_title('correlation heatmap')
 
 
 
-#'apprance'0.3, 'goals_conceded'0.25,'clean_sheets'0.15,'ppg'0.1, 'yellow_cards'0.1, 'second_yellow_cards'0.05, 'red_cards'0.05
+#'apprance'0.4, 'goals_conceded'-0.4,'clean_sheets'0.2,'ppg'0.15, 'yellow_cards'-0.05, 'second_yellow_cards'-0.05, 'red_cards'-0.05
 #set_metric
-df1["score"] = df1["apprance"] * 0.3 + df1["goals_conceded"] * -0.2 + df1["clean_sheets"] * 0.2 + df1["ppg"] * 0.15 + df1["yellow_cards"] * -0.05 + df1["second_yellow_cards"] * -0.05 + df1["red_cards"] * 0.05
+df1["score"] = df1["apprance"] * 0.4 + df1["goals_conceded"] * -0.4 + df1["clean_sheets"] * 0.2 + df1["ppg"] * 0.15 + df1["yellow_cards"] * -0.05 + df1["second_yellow_cards"] * -0.05 + df1["red_cards"] * -0.05
+
+#sort_by score
+df1 = df1.sort_values("score" , ascending=False)
+df_gk = df1["player_name"].unique()
+df_gk_final = pd.DataFrame(df_gk, columns=["name"])
+
+#Keeping the first thirty percent of the data
+df_gk_30 = df_gk_final.head(293)
+
+
