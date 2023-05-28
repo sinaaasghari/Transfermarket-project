@@ -16,7 +16,10 @@ df1 = df.copy()
 df1.drop(['id','id.1','id.2', 'season_id.1', 'club_id', 'player_id.1',
        'age'], axis=1, inplace=True)
 
+#we wanna just 2021 data
+values_to_drop= [2015, 2016, 2017, 2018, 2019, 2020]
 
+df1 = df1[~df1['season_id'].isin(values_to_drop)]
 #set_apprance
 df1["apprance"] = df1["games_played"] / df1["total_games"] 
 df1.drop(["total_games","games_played"], axis=1, inplace=True)
