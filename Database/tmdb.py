@@ -192,6 +192,14 @@ class ClubSeasonal(Base):
     season_id = mapped_column(Integer, ForeignKey('seasons.id'))
     club_id = mapped_column(Integer, ForeignKey('clubs.id'))
     squad_count = mapped_column(Integer)
+    games_count = mapped_column(Integer)
+    wins = mapped_column(Integer)
+    draws = mapped_column(Integer)
+    losses = mapped_column(Integer)
+    goals_scored = mapped_column(Integer)
+    goals_received = mapped_column(Integer)
+    goal_differences = mapped_column(Integer)
+    points = mapped_column(Integer)
     avg_age = mapped_column(Float)
     avg_mkv = mapped_column(Float)
     total_mkv = mapped_column(Float)
@@ -316,12 +324,20 @@ for clb in clubs:
 
 session.commit()
 
-for clb in clubs_se:
+for i, clb in club_se.iterrows():
 
     clubs_se_obj = ClubSeasonal(
         season_id = clb['season_id'],
         club_id = clb['club_id'],
         squad_count = clb['squad_number'],
+        games_count = clb['num_games'],
+        wins = clb['wins'],
+        draws = clb['draws'],
+        losses = clb['losses'],
+        goals_scored = clb['goals_scored'],
+        goals_received = clb['goals_conceded'],
+        goal_differences = clb['goal_differences'],
+        points = clb['points'],
         avg_age = clb['avg_age'],
         avg_mkv = clb['avg_mkv'],
         total_mkv = clb['total_mkv']
