@@ -76,7 +76,7 @@ with open("Clubs_and_ClubsBySeasons.json", "r") as file:
     club_data = json.load(file)
 
 clubs = club_data[0]
-clubs_se = club_data[1]
+clubs_se = pd.read_csv('seasonal_clubs_with_performances.csv')
 
 #players
 players_df = pd.read_json("Player_json.json")
