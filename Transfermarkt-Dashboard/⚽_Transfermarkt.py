@@ -29,7 +29,7 @@ st.title("Transfermarkt Data analysis Project")
 st.write("")
 st.subheader("Description:")
 st.write('In this project we used the data from [Transfermarkt](https://www.transfermarkt.com) to do some statistical analyses and train machine learning models based on the scraped data.')
-st.write('In this regard, we started the project by scraping the data, based on a database schema, which was designed to be commensurate with the analysis implementations. then after implementing and storing the data into the database, we started the statistical analysis')
+st.write('In this regard, we started the project by scraping the data, based on a database schema, which was designed to be commensurate with the analysis implementations. then after implementing the database and storing the data in it, we started our statistical journey.')
 
 st.write("")
 st.subheader("Steps")

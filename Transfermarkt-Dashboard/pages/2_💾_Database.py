@@ -26,7 +26,7 @@ st.write("")
 col1,  col2 = st.columns([10,5])
 with col1:
     st.write("In this step, we used the [SQLAlchemy](https://www.sqlalchemy.org/) Python library to implement the database schema and for storing the data in it.")
-    st.write("What we do at this point is storing the data in the database. For this, we use the SQLAlchemy library. It has many advantages over Python mysql connector, one of them is having Object Relational Mapping (ORM). It's a technique used in creating a 'bridge' between object-oriented programs and, in most cases, relational databases and therefore it's possible to interact with the datbase in a pythonic way rather with than pure sql queries.")
+    st.write("What we do at this point is storing the data in the database. For this, we use the SQLAlchemy library. It has many advantages over Python mysql connector, one of them is having Object Relational Mapping (ORM). It's a technique used in creating a 'bridge' between object-oriented programs and, in most cases, relational databases and therefore it's possible for it to interact with the datbase in a more pythonic way rather than than pure sql queries.")
 with col2:
     st_lottie(lottie_doctor, key="hello",speed=1, loop=True, quality="high", width=300,height=200)
 st.write("")
