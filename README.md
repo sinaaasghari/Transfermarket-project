@@ -28,7 +28,7 @@ To run the dashboard, follow these steps:
 
 ```bash
 python run_dashboard.py
-
+```
 
 ## Getting Started
 
@@ -37,12 +37,12 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 ```bash
 git clone git@github.com:sinaaasghari/Transfermarket-project.git
-
+```
 
 2. Install the necessary dependencies:
 ``` bash
 pip install -r requirements.txt
-
+```
 3. Scraping the Required Data:
 
     Steps:
