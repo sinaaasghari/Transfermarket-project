@@ -16,17 +16,31 @@ The project encompasses the following steps:
 
 4. **Machine Learning Model Training**: Building upon the statistical analyses, machine learning models are developed to predict specific outcomes or make informed decisions based on the available data. This step involves feature engineering, model selection, training, and evaluation.
 
+- This project contains a dashboard file that provides a comprehensive overview of the project. The dashboard can be accessed by running the `run_dashboard.py` file located in the `Transfermarkt-Dashboard` folder.
+
+To run the dashboard, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Navigate to the `Transfermarkt-Dashboard` folder.
+3. Ensure that you have all the necessary dependencies installed (`pip install -r requirements.txt`).
+4. Open a terminal or command prompt in the `Transfermarkt-Dashboard` folder.
+5. Open `run_dashboard.py` or run the following command to start the dashboard:
+
+```bash
+python run_dashboard.py
+
+
 ## Getting Started
 
 To get started with this project, follow these steps:
 
 1. Clone the repository:
-
+```bash
 git clone git@github.com:sinaaasghari/Transfermarket-project.git
 
 
 2. Install the necessary dependencies:
-
+``` bash
 pip install -r requirements.txt
 
 3. Scraping the Required Data:
