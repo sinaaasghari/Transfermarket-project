@@ -30,25 +30,31 @@ git clone git@github.com:sinaaasghari/Transfermarket-project.git
 pip install -r requirements.txt
 
 3. Scraping the Required Data:
-- Modify the scraping script (`scraping.py`) to specify the desired data to be collected.
+
+    Steps:
+
+    • Scraping the seasons and countries data.
+    • Scraping the leagues data based on seasons and countries and unique information for each league.
+    • Scraping the clubs data based on seasons and leagues and unique information for each club.
+    • Scraping the players data based on seasons and clubs and unique information (performances) for each player.
+    • Scraping the transfer data for each of the players.
+    • Scraping the data of the clubs' appearance in the 2021 Champions League.
+
+- Modify the scraping script (all .py files in `Scrapping data` folsder ) to specify the desired data to be collected.
 - Run the script to scrape the data from Transfermarkt.
 - The scraped data will be stored in the database for further analysis.
 
 4. Design, Implementation, and Storage of Data in the Database:
 - Set up a database system (e.g., MySQL, PostgreSQL) and create a new database for the project.
-- Modify the database connection settings in the configuration file (`config.py`) to match your database setup.
-- Run the database creation script (`create_database.py`) to generate the necessary tables and schema.
-- Execute the data storage script (`store_data.py`) to populate the database with the scraped data.
+- open (`tmdb.py`) and in line **117 , 144** replace your username and in line **118,145** replace your password.
+- Run the database creation script (`tmdb.py`) to generate the necessary tables and schema.
+
 
 5. Statistical Analyses:
-- Explore the dataset and perform statistical analyses using Jupyter Notebook (`analysis.ipynb`) or any preferred analysis tool.
-- Document your findings, insights, and any visualizations generated.
+- 
 
 6. Machine Learning Model Training:
-- Utilize the prepared dataset and the provided ML models (`ml_models.py`) to train and evaluate machine learning models.
-- Experiment with different models, hyperparameters, and feature engineering techniques to improve performance.
-- Evaluate the models using appropriate metrics and document the results.
-
+- 
 ## Contribution
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please submit an issue or a pull request. Let's collaborate and make this project even better.
