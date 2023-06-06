@@ -51,10 +51,10 @@ pip install -r requirements.txt
 
 
 5. Statistical Analyses:
-- 
+- We worked on three requests and three Hypothesis, each of which was handled in a separate file.
 
 6. Machine Learning Model Training:
-- 
+- The ML section of the bootcamp project involves using machine learning techniques to estimate and classify data from `transfermarkt.com`.
 ## Contribution
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please submit an issue or a pull request. Let's collaborate and make this project even better.
