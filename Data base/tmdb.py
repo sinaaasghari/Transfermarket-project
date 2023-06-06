@@ -114,8 +114,8 @@ with open("Champions_league.json", "r") as file:
 
 url_object = URL.create(
     "mysql+mysqlconnector",
-    username="Arsalan_quera",
-    password="Quera402",
+    username="**",
+    password="***",
     host="localhost",
 )
 
@@ -141,8 +141,8 @@ class Base(DeclarativeBase):
 
 url_object = URL.create(
     "mysql+mysqlconnector",
-    username="Arsalan_quera",
-    password="Quera402",
+    username="***",
+    password="****",
     host="localhost",
     database=DB_NAME
 )
