@@ -33,14 +33,14 @@ pip install -r requirements.txt
 
     Steps:
 
-    • Scraping the seasons and countries data.
-    • Scraping the leagues data based on seasons and countries and unique information for each league.
-    • Scraping the clubs data based on seasons and leagues and unique information for each club.
-    • Scraping the players data based on seasons and clubs and unique information (performances) for each player.
-    • Scraping the transfer data for each of the players.
-    • Scraping the data of the clubs' appearance in the 2021 Champions League.
+    - Scraping the seasons and countries data.
+    - Scraping the leagues data based on seasons and countries and unique information for each league.
+    - Scraping the clubs data based on seasons and leagues and unique information for each club.
+    - Scraping the players data based on seasons and clubs and unique information (performances) for each player.
+    - Scraping the transfer data for each of the players.
+    - Scraping the data of the clubs' appearance in the 2021 Champions League.
 
-- Modify the scraping script (all .py files in `Scrapping data` folsder ) to specify the desired data to be collected.
+- Modify the scraping script (all .py files in `Scrapping data` folders ) to specify the desired data to be collected.
 - Run the script to scrape the data from Transfermarkt.
 - The scraped data will be stored in the database for further analysis.
 
