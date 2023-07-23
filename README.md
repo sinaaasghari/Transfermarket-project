@@ -77,4 +77,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 - The Transfermarkt website for providing valuable data for analysis.
 - Open-source libraries and frameworks used in this project.
--  [*Sina Asghari*](https://github.com/sinaaasghari) and [*ArsalanMoravvej*](https://github.com/ArsalanMoravvej), [*Sina Saberi*], [*Mohammad Norasteh*](https://github.com/houman-nr) for their contributions and efforts in developing this project.
+-  [*Sina Asghari*](https://github.com/sinaaasghari) and [*ArsalanMoravvej*](https://github.com/ArsalanMoravvej), [*Sina Saberi*](https://github.com/ssinasaberii), [*Mohammad Norasteh*](https://github.com/houman-nr) for their contributions and efforts in developing this project.
